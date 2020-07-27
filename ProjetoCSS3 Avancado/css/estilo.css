@@ -1,0 +1,211 @@
+/* body {
+    color: red;
+    font-size: 16px;
+} */
+
+/* ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    padding: 5px 20px;
+    background: url(../imagens/seta.png) no-repeat left center;
+} */
+
+/************ barra de navegação vertical **********/
+/* ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul a {
+    width: 200px;
+    height: 40px;
+    display: block;
+    color: #000;
+    text-decoration: none;
+    text-indent: 35px;
+    line-height: 40px;
+    background: #f7b600 url(../imagens/menu.png) left;
+}
+a:hover {
+    background-position: right;
+    background-color: #f99200;
+    color: #fff;
+}
+#home #navegacao .home a,
+#sobre #navegacao .sobre a,
+#servicos #navegacao .servicos a,
+#noticias #navegacao .noticias a,
+#contato #navegacao .contato a {
+    background-position: right;
+    background-color: #f99200;
+    color: #fff;
+} */
+
+/************ barra de navegação horizontal **********/
+
+/* ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 556px;
+    background: #159cb0 url(../imagens/fundo-horizontal.png) repeat-x;
+    float: left;
+}
+
+ul li {
+    float: left;
+}
+
+ul a {
+    display: block;
+    padding: 0 2em;
+    line-height: 2.2em;
+    text-decoration: none;
+    color: #fff;
+    background: url(../imagens/divisor.png) repeat-y left;
+}
+
+ul .primeiro a {
+    background: none;
+}
+
+ul a:hover {
+    color: #085662;
+    background: #44cade;
+}
+
+#home #navegacao .home a,
+#sobre #navegacao .sobre a,
+#servicos #navegacao .servicos a,
+#noticias #navegacao .noticias a,
+#contato #navegacao .contato a {
+    color: #085662;
+    background: #44cade;
+}  */
+
+/************ barra de navegação com abas **********/
+
+/* body {
+    font-family: 'Trebuchet MS', 'Helvetica', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 600px;    
+}
+ul li {
+    float: left;
+    background: url(../imagens/aba-direita2.png) no-repeat top right;
+}
+li a {
+    display: block;
+    padding: 0 2em;
+    line-height: 3em;
+    text-decoration: none;
+    background: url(../imagens/aba-esquerda2.png) no-repeat top left;
+    color: #fff; 
+}
+ul a:hover {
+    color: #894a1f;
+}
+ul #atual {
+    background: url(../imagens/aba-direita-atual.png) no-repeat top right;
+}
+ul #atual a {
+    background: url(../imagens/aba-esquerda-atual.png) no-repeat top left;
+} */
+
+/************ Layouts Fixos **********/
+
+body {
+    font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
+    background: #f2f2f2;
+}
+
+#container {
+    /* width: 720px; layout fixo*/
+    width: 80%; 
+    margin: 0 auto;
+    background: #fff;
+    min-width: 680px;
+    max-width: 1280px;
+}
+
+#marca {
+    /* height: 100px; layout fixo e fluido*/
+    height: 200px;
+    background: #225992 url(../imagens/cabecalho2.jpg) no-repeat center;
+    text-align: center;
+    line-height: 200px;
+    /* line-height: 100px; layout fixo e fluido*/
+}
+
+#conteudo {
+    /* width: 520px;  layout fixo*/
+    width: 75%;
+    float: right;
+}
+
+#conteudo-principal {
+    /* border: 1px solid red; */
+ /* width: 320px; layout fixo */
+ width: 64%;
+ float: left;
+}
+
+#conteudo-secundario {
+    /* border: 1px solid red; */
+    /* width: 180px; layout fixo*/
+    width: 34%;
+    float: right;
+    background: #d1d1d1;
+}
+
+#conteudo-secundario h1,
+#conteudo-secundario h2,
+#conteudo-secundario h3,
+#conteudo-secundario p {
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+#navegacao {
+    /* width: 180px;  Layout fixo*/
+    width: 24%;
+    float: left;
+    background: #d1d1d1;
+}
+
+#navegacao ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#navegacao li a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    text-indent: 20px;
+    line-height: 40px;
+
+}
+#navegacao a:hover {
+    background-color: #c4c4c4;
+    color: #fff;
+}
+
+#rodape {
+    clear: both;
+    background: #c4c4c4;
+    padding: 5px;
+}
+
