@@ -130,10 +130,10 @@ body {
 }
 
 #container {
-    /* width: 720px; layout fixo*/
-    width: 80%; 
+    width: 960px; /*layout fixo */
+    /* width: 80%; layout fluido */
     margin: 0 auto;
-    background: #fff;
+    background: #fff url(../imagens/coluna.png) repeat-y top left;
     min-width: 720px;
     max-width: 1280px;
 }
@@ -183,12 +183,12 @@ img.img-noticia {
     padding-right: 20px;
 
 }
-
+    
 #navegacao {
     /* width: 180px;  Layout fixo*/
-    width: 24%;
+    width: 22%;
     float: left;
-    background: #d1d1d1;
+    /* background: #d1d1d1; layout fixo e fluido*/
 }
 
 #navegacao ul {
