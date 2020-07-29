@@ -401,7 +401,7 @@ input.radio, input.checkbox, input.submit {
 
 /*******************************
 Estilizando formulários parte 2 */
-body{
+/* body{
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	background: #643d87 url(../imagens/fundo.jpg) no-repeat top center;
 }
@@ -458,9 +458,45 @@ input.submit {
 	background: -o-linear-gradient(to bottom, #faa600, #f68a00);
 	background: linear-gradient(to bottom, #faa600, #f68a00);
 
+} */
+
+/*******************************
+Arredondamento com imagens */
+
+.caixa {
+    width: 400px;
+    background: #dedede url(../imagens/fundo-arredondamento.png) repeat-y;
+}
+
+.caixa h2 {
+    padding: 10px 20px 0 20px;   
+    background: url(../imagens/topo2.png) no-repeat left top;
+}
+
+.caixa p {
+    padding: 0px 20px;  
+    margin-bottom: 0;   
+}
+
+.caixa .ultimo {
+    background: url(../imagens/baixo2.png) no-repeat left bottom; 
+    width: 400px;
+    height: 24px;
 }
 
 
+
+/* .caixa {
+    width: 400px;
+    background: #dedede url(../imagens/topo2.png) no-repeat left top;
+}
+h2 {
+    padding: 10px 20px 0 20px;    
+}
+.caixa p {
+    padding: 0px 20px 20px 20px;        
+    background: url(../imagens/baixo2.png) no-repeat left bottom; 
+} */
 
 
 
