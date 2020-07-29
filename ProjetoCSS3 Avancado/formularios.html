@@ -4,9 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estilizando Formularios</title>
-    <link rel="stylesheet" href="css/tabela.css">
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
     <h2>Estilizando Formularios</h2>
+    <form action="">
+        <fieldset>
+            <legend>Detalhes de contato</legend>
+            <div>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome">
+            </div>
+            <div>
+                <label for="email">E-mail:</label>
+                <input type="text" name="email" id="email">
+            </div>
+            <div>
+                <label for="url">URL:</label>
+                <input type="text" name="url" id="url">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Comentários</legend>
+            <div>
+                <label for="mensagem">Mensagem:</label>
+                <textarea name="mensagem" id="mensagem" cols="35" rows="5"></textarea>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Lembrar de mim</legend>
+            <div>
+                <label>
+                    <input class="radio" type="radio" name="lembrar" id="sim">Sim
+                </label>                
+                <label>
+                    <input class="radio" type="radio" name="lembrar" id="nao">Não
+                </label>                                
+            </div>
+        </fieldset>
+
+    </form>
 </body>
 </html>

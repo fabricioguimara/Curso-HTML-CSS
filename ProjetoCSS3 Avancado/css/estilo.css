@@ -260,3 +260,39 @@ tr:hover td {
 
 
 /*****************Estilizando Formularios******************/
+
+/* body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 600px;
+}
+
+fieldset {
+    margin: 1em 0;
+    padding: 1em;
+    border: 1px solid #ccc;
+    background: #f8f8f8;
+}
+
+legend {
+    font-weight: bold;
+}
+
+label {
+
+    display: block;
+    cursor: pointer;
+}
+
+input {
+    width: 20em;
+}
+
+input.radio, input.checkbox, input.submit {
+    width: auto;
+}
+
+.radio {
+    margin-right: 0.5em;
+} */
+
+/*****************Estilizando Formularios part 2******************/
