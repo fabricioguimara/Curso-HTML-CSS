@@ -124,34 +124,36 @@ ul #atual a {
 
 /************ Layouts Fixos **********/
 
-body {
+
+
+/* body {
     font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
     background: #f2f2f2;
-}
+} */
 
-#container {
+/* #container {
     width: 960px; /*layout fixo */
-    /* width: 80%; layout fluido */
-    margin: 0 auto;
+    /* width: 80%; */ /*layout fluido */
+    /* margin: 0 auto;
     background: #fff url(../imagens/coluna.png) repeat-y top left;
     min-width: 720px;
     max-width: 1280px;
-}
+} */ 
 
-#marca {
+/* #marca {
     /* height: 100px; layout fixo e fluido*/
-    height: 200px;
+    /* height: 200px;
     background: #225992 url(../imagens/cabecalho2.jpg) no-repeat center;
     text-align: center;
     line-height: 200px;
     /* line-height: 100px; layout fixo e fluido*/
-}
+/* } */ 
 
-#conteudo {
+/* #conteudo {
     /* width: 520px;  layout fixo*/
-    width: 75%;
-    float: right;
-}
+    /* width: 75%; */
+    /* float: right; */
+/* } 
 
 img.img-noticia {
     border: 1px solid red;
@@ -163,35 +165,35 @@ img.img-noticia {
 #conteudo-principal {
     border: 1px solid red;
  /* width: 320px; layout fixo */
- width: 64%;
+ /* width: 64%;
  float: left;
-}
+} */
 
-#conteudo-secundario {
+/* #conteudo-secundario {
     /* border: 1px solid red; */
     /* width: 180px; layout fixo*/
-    width: 34%;
+    /* width: 34%;
     float: right;
     background: #d1d1d1;
-}
+} */ 
 
-#conteudo-secundario h1,
+/* #conteudo-secundario h1,
 #conteudo-secundario h2,
 #conteudo-secundario h3,
 #conteudo-secundario p {
     padding-left: 20px;
     padding-right: 20px;
 
-}
+} */
     
-#navegacao {
+/* #navegacao { */
     /* width: 180px;  Layout fixo*/
-    width: 22%;
-    float: left;
+    /* width: 22%;
+    float: left; */
     /* background: #d1d1d1; layout fixo e fluido*/
-}
+/* } */
 
-#navegacao ul {
+/* #navegacao ul {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -214,5 +216,47 @@ img.img-noticia {
     clear: both;
     background: #c4c4c4;
     padding: 5px;
+} */
+
+/*****************Estilizando Tabelas******************/
+
+/* body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+table {
+    width: 600px;
+    border-collapse: separate; /*colapse*/
+
+/* } */
+
+/* th, td {
+    padding: 7px;
+}
+
+th {
+    text-transform: uppercase;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #111;
+    text-align: left;
+    font-size: 90%;
+    letter-spacing: 0.1em;
+}
+
+tr.alternado {
+    background-color: #efefef;
+
+}
+
+
+tr:hover td {
+    background-color: #c3e6e5;
+}
+
+.numero {
+    text-align: right;
+}
+ */
+
+
+/*****************Estilizando Formularios******************/
