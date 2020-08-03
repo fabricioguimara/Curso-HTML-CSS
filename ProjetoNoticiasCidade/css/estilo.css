@@ -60,7 +60,7 @@ ul {
 	font-size: 0.9em;
 	display: block;
 	padding: 0.5em 1.5em;
-	line-height: 2.1em;
+	line-height: 1.7em;
 	text-decoration: none;
 	color: #fff;
 	background: url(../imagens/divisor.png) no-repeat left center;
@@ -99,7 +99,7 @@ body.fotos #navegacao a#fotos
 #primario {
 	width: 270px;
 	float: left;
-	margin: 0 0 20px 195px ;
+	margin: 0 0 20px 195px;
 }
 
 #duas-colunas #primario {
@@ -151,7 +151,7 @@ h2 {
 
 #lateral ul a:hover {
 	background: #f9f9f9 url(../imagens/marcador.png) no-repeat left center;
-	padding-left: 20px;
+	padding-left: 20px; /* padding nao afeta a imagem acima no background */
 	color: #a1a1a1;
 }
 
