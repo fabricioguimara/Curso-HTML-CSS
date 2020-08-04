@@ -1,5 +1,6 @@
-/* Estrutura do site
-*/
+/****************
+Formataçoes Gerais 
+********************/
 * {
 	margin:0;
 	padding: 0;
@@ -15,6 +16,23 @@ a {
 ul {
 	list-style: none;
 }
+h2 {
+	color: #7d7640;
+	font-size: 1.1em;
+	padding: 5px 0px;
+}
+p {
+	font-size: 1em;
+	margin-bottom: 10px;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+/*********
+Conteudo header da pagina 
+*******************/
 
 #container {
 	background: #ede9cc url(../imagens/bg-container.png) top center repeat-y;
@@ -114,7 +132,7 @@ ul#navegacao a:hover {
 	float: right;
 }
 
-/* Área de conteúdos 
+/* Área de conteúdos principal 
 ************************/
 #area-principal {
     background: url(../imagens/bg-area-principal.png) top left repeat-x;
@@ -136,37 +154,37 @@ ul#navegacao a:hover {
 }
 
 #rodape {
-    clear: both;
+	clear: both;
+	padding: 16px;
+	background: #fff url(../imagens/bg-rodape.png) repeat-x top;
+	color: #7d7640;
 }
 
+/*Formatando area lateral*/
+#beneficios li {
+	padding: 8px;
+	border-bottom: 1px solid #f3efcb; 
+	height: 6em;
+}
 
+#beneficios li a img {
+	float: left;
+	margin-right: 8px;
+}
 
+#beneficios li a p {
+	font-size: 0.8em;
+	color: #000;
+}
 
+#beneficios li a h3 {
+	font-size: 1em;
+	color: #615b2d;
+	padding: 5px 0;
+	background: url(../imagens/ornamento.png) no-repeat center right;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#beneficios li:hover {
+	background: #f6f3d6;
+	cursor: pointer;
+}
