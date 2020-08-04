@@ -4,11 +4,16 @@
 	margin:0;
 	padding: 0;
 }
-
 body {
 	font-family: Helvetica, "Trebuchet MS", sans-serif;
 	background: #fff url(../imagens/bg.png);
 	margin: 15px;
+}
+a {
+	text-decoration: none;
+}
+ul {
+	list-style: none;
 }
 
 #container {
@@ -35,25 +40,25 @@ body {
 	z-index: 1;
 }
 
-.logo a {
-	position: absolute;
-	top: 15px;
-	left: 15px;
-	z-index: 3;
-	background: url(../imagens/logo.png) no-repeat;
-	width: 151px;
-	height: 66px;
-	text-indent: -9000px;
-}
-
 #area-menu {
 	position: absolute;
 	top: 0;
 	right: 0;
-	background: url(../imagens/topo-imagem-lateral.png) no-repeat; ;
-	width: 450px;
+	background: url(../imagens/topo-imagem-lateral.png) no-repeat;
+	width: 450px; /* seta a imagem fixa para ela sobrepor a outra */
 	height: 250px;
 	z-index: 2;
+}
+
+.logo a {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	background: url(../imagens/logo.png) no-repeat;
+	width: 151px;
+	height: 66px;
+	text-indent: -9000px;
+	z-index: 3;
 }
 
 #conteudo-menu {
@@ -69,33 +74,22 @@ body {
 	padding-bottom: 5px;
 	font-size: 0.7em;
 	color: #8b8448;
-}
-
-#menu-locais .locais {
-	float: left;
 	line-height: 2.1em;
 }
 
-a {
-	text-decoration: none;
-}
-
 a.reserva {
+	position: absolute;
+	right: 15px;
 	text-transform: uppercase;
 	background: #a29750;
 	color: #fff5b0;
-	padding: 5px 10px;
-	float: right;
+	padding: 0 10px;
 }
 
 /* Barra de navegação vertical
-*/
+********************************/
 #menu {
 	margin-top: 15px;
-}
-
-ul {
-	list-style: none;
 }
 
 ul#navegacao {
@@ -120,6 +114,8 @@ ul#navegacao a:hover {
 	float: right;
 }
 
+/* Área de conteúdos 
+************************/
 #area-principal {
     background: url(../imagens/bg-area-principal.png) top left repeat-x;
     float: left;
