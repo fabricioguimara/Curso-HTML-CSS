@@ -42,14 +42,15 @@ body, input, button, textarea {
     font: 500 1.6rem Poppins;
     color: var(--color-text-base);
 }
-
+/******* Formatação para celulares geral *******/
 #container {
     width: 90vw;
     max-width: 700px;
 }
 
+/**** Formatação para Ipad geral ********/
 @media (min-width: 700px) {
     :root {
-        font-size: 62.5%;
+        font-size: 62.5%; /* todo 1rem vai ser relativo a 10px */
     }
 }
