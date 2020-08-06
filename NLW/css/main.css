@@ -42,7 +42,7 @@ body, input, button, textarea {
     font: 500 1.6rem Poppins;
     color: var(--color-text-base);
 }
-/******* Formatação para celulares geral *******/
+
 #container {
     width: 90vw;
     max-width: 700px;
