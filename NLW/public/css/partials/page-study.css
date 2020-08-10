@@ -108,6 +108,11 @@
 .teacher-item footer .button:hover {
     background: var(--color-secondary-dark);
 }
+#page-study main .no-results {
+    max-width: 30rem;
+    margin: 12rem auto;
+    text-align: center;
+}
 
 /* Formatando o site para desktop */
 @media (min-width:700px) {

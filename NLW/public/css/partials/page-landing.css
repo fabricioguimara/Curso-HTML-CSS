@@ -67,10 +67,14 @@
 
 /******formatação para celulares na home *******/
 
-@media (max-width: 699px) {
+@media (max-width: 1100px) {
     :root {
         font-size: 40%;
     }
+    .hero-image img {
+        height: 45rem;
+    }
+
 }
 /******formatação para desktops na home *******/
 
