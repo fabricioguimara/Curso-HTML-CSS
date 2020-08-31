@@ -1,0 +1,126 @@
+@charset "UTF-8";
+/* for */
+/* through e to */
+.item-1 {
+  background: green;
+  margin-bottom: 2px;
+}
+
+.item-2 {
+  background: green;
+  margin-bottom: 2px;
+}
+
+.item-3 {
+  background: green;
+  margin-bottom: 2px;
+}
+
+/* while */
+.item-1 {
+  background: orange;
+  margin-bottom: 2px;
+}
+
+.item-2 {
+  background: orange;
+  margin-bottom: 2px;
+}
+
+.item-3 {
+  background: orange;
+  margin-bottom: 2px;
+}
+
+.item-4 {
+  background: orange;
+  margin-bottom: 2px;
+}
+
+/* each */
+.item-1 {
+  background: green;
+  margin-bottom: 2px;
+}
+
+.item-2 {
+  background: yellow;
+  margin-bottom: 2px;
+}
+
+.item-3 {
+  background: red;
+  margin-bottom: 2px;
+}
+
+/* Funções */
+.col-1 {
+  width: 8.3333333333%;
+  background: green;
+}
+
+.col-2 {
+  width: 16.6666666667%;
+  background: green;
+}
+
+.col-3 {
+  width: 25%;
+  background: green;
+}
+
+.col-4 {
+  width: 33.3333333333%;
+  background: green;
+}
+
+.col-5 {
+  width: 41.6666666667%;
+  background: green;
+}
+
+.col-6 {
+  width: 50%;
+  background: green;
+}
+
+.col-7 {
+  width: 58.3333333333%;
+  background: green;
+}
+
+.col-8 {
+  width: 66.6666666667%;
+  background: green;
+}
+
+.col-9 {
+  width: 75%;
+  background: green;
+}
+
+.col-10 {
+  width: 83.3333333333%;
+  background: green;
+}
+
+.col-11 {
+  width: 91.6666666667%;
+  background: green;
+}
+
+.col-12 {
+  width: 100%;
+  background: green;
+}
+
+/*
+Outras Funções 
+mix(green,orange,50%)
+darken(orange,50%)
+lighten(orange,40%)
+*/
+.alerta {
+  background: #ffedcc;
+  color: yellow;
+}

@@ -1,0 +1,41 @@
+@charset "UTF-8";
+/* Aninhamento */
+/* Referenciando seletor pai*/
+#conteudo {
+  background: green;
+  padding: 15px;
+}
+#conteudo h1, #conteudo h2 {
+  color: black;
+}
+#conteudo a {
+  color: red;
+}
+#conteudo a:hover {
+  color: yellow;
+}
+
+/* Variáveis */
+h2 {
+  color: blue;
+}
+
+h3 {
+  color: blue;
+}
+
+/* Escopo Variáveis 
+(onde variável é reconhecida) 
+*/
+#rodape {
+  background-color: green;
+}
+
+h2 {
+  color: green;
+}
+
+/* Interpolacao */
+.vermelho {
+  color: vermelho;
+}
