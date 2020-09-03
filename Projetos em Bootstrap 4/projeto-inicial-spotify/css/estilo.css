@@ -6,7 +6,8 @@
 /* Layout
 -----------------------------*/
 html, body, #home {
-	height: 100%;
+    height: 100%;
+    overflow-x: hidden; /* tbm mantem o background fixed alem te tirar scroll horizontal*/
 }
 
 body {
@@ -71,19 +72,74 @@ nav.navbar-transparente {
 	color: black;
 }
 
+/* Rodape
+-----------------------------*/
+
+footer {
+    background: #000;
+    padding: 50px 0 20px 0;
+    position: relative;
+}
+footer h4 {
+    color: #919496;
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+footer .navbar-nav a {
+    color: white;
+    font-size: 0.8rem;
+}
+footer .navbar-nav a:hover {
+    color: #9bf0e1;
+    text-decoration: none;
+}
+footer ul {
+    list-style: none;
+}
+footer li {
+    float: right;
+    margin: 0 5px;
+}
 /* Tipografia
 -----------------------------*/
+
 h1 {
 	font-weight: 700;
 	letter-spacing: -0.05em;
 	margin-bottom: 50px;
 	color: white;
 }
+h2, h3 {
+    font-weight: 700;
+    letter-spacing: -0.04em;
+}
+h2 {
+    font-size: 3em;
+}
+h3 {
+    font-size: 2em;
+}
+#servicos h2, h3 {
+    color: #7c25f8;
+}
+#recursos h2 {
+    color: white;
+}
+#recursos h3 {
+    color: #9bf0e1;
+}
+
+.rotacionar {
+    transform: rotate(30deg);
+    padding-left: 80px;
+}
+
 
 /* Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
 	.btn-custom {
-		margin: 10px 15px;
+        margin: 10px 15px;
+        font-size: 1em;
 	}
 }
 
