@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript</title>
+
+  <style>
+    .estilo1 {
+      background: #FF0000;
+      color: #FFF;
+    }
+
+    .estilo2 {
+      width: 640px;
+      height: 480px;
+      background: url("https://cdn.falauniversidades.com.br/wp-content/uploads/2018/10/4eddbf78-monstro-do-arm%C3%A1rio-resenha-critica-resumo.jpg") no-repeat;
+      text-align: center;
+      font-size: 25px;
+      color: #FFF;
+      /* padding: 25px; */
+    }
+  </style>
+  
+  <script>
+    function modificaClasse() {
+      var classeAtual = document.getElementById('mensagem').className
+      var aAudio1 = new Audio('horse.ogv');
+      var aAudio2 = new Audio('beep-03.mp3');
+      document.getElementById('botao').style.textTransform = "uppercase";
+      if (classeAtual == 'estilo1') {
+        document.getElementById('mensagem').className = 'estilo2'
+        aAudio1.play();
+        document.getElementById('botao').textContent = "Eu te falei!!!"
+      } else {
+        document.getElementById('mensagem').className = 'estilo1'
+        aAudio2.play();
+        document.getElementById('botao').textContent = "Não clique aqui!!"
+      }
+    }
+
+  </script>
+
+</head>
+
+<body>
+  <div id="mensagem" class="estilo1"></div>
+  <hr />
+  <button id="botao" type="button" onclick="modificaClasse()">Não clique aqui!!</button>
+
+
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript</title>
+  <style>
+    button {
+      width: 100px;
+      height: 50px;
+      margin-right: 50px;
+      margin-bottom: 50px;
+    }
+
+    div {
+      width: 300px;
+      height: 300px;
+      margin-top: 50px;
+    }
+
+    #vermelho {
+      background-color: red;
+    }
+
+    #azul {
+      background-color: blue;
+    }
+
+    #verde {
+      background-color: green;
+    }
+
+    #amarelo {
+      background-color: yellow;
+    }
+
+    #laranja {
+      background-color: orange;
+    }
+  </style>
+  <script>
+    function mudaDiv(color, largura, altura) {
+      document.getElementById('resultado').style.background = color
+      document.getElementById('resultado').style.width = largura
+      document.getElementById('resultado').style.height = altura
+    }
+  </script>
+
+</head>
+
+<body>
+  <h3>Manipulando estilo</h3>
+  <button id="vermelho" onclick="mudaDiv('#FF0000','400px','400px')"></button>
+  <button id="azul" onclick="mudaDiv('#0000FF','300px','300px')"></button>
+  <button id="verde" onclick="mudaDiv('#00FF00','200px','200px')"></button>
+  <button id="amarelo" onclick="mudaDiv('#FFFF00','100px','100px')"></button>
+  <button id="laranja" onclick="mudaDiv('#FFA500','50px','50px')"></button>
+  <hr>
+  <div id="resultado" style="border: 1px solid black;"></div>
+</body>
+
+</html>
