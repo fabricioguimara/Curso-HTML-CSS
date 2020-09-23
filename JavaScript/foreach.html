@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript</title>
+
+
+  <script>
+    // var listaFuncionarios = ['Viviane', 'Rosângela', 'Miguel', 'Lucas', 'Fernanda']
+    var listaFuncionarios = Array()
+    listaFuncionarios['x'] = 'Viviane'
+    listaFuncionarios[false] = 'Rosângela'
+    listaFuncionarios[3] = 'Miguel'
+    listaFuncionarios[27] = 'Lucas'
+    listaFuncionarios[-12] = 'Fernanda'
+
+    //usando variavel 
+    var f = function (valor, indice) {
+      console.log(valor, indice)
+    }
+    listaFuncionarios.forEach(f) //forEach começa a partir de 0 (cuidado!!!)
+
+        //usando funçao sem variavel
+    // listaFuncionarios.forEach(myFunction);
+    // function myFunction(item, index) {
+    //   console.log(item, index)
+    // }
+    
+    //usando arrow function
+    // listaFuncionarios.forEach((valor,indice) => {console.log(valor, indice)});
+
+
+    // modelo tradicional
+    /* listaFuncionarios.forEach(function(valor, indice, array) {
+    
+      console.log('indice ' + indice + ' | valor:' + valor)
+      if(valor === 'Lucas'){
+        array[indice] = 'Um novo valor'
+      }
+      console.log(array)
+    }) */
+  </script>
+
+</head>
+
+<body>
+</body>
+
+</html>
