@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
 
+<head>
+	<title>Jogo - Mata mosquito</title>
+
+	<link rel="stylesheet" href="estilo.css" />
 	<script src="jogo.js"></script>
 </head>
-<body onresize="ajustaTamanhoPalcoJogo()">
 
+<body onresize="ajustaTamanhoPalcoJogo()">
+	<div id="myDiv" class="hideImg">
+		<img id="myImg" src="imagens/game_over.png" alt="">
+		<button class="myButton" onclick="window.location.href = 'index.html'">Reiniciar</button>
+	</div>
+
+	<div class="painel">
+		<div class="vidas">
+			<img id="v1" src="imagens/coracao_cheio.png" alt="">
+			<img id="v2" src="imagens/coracao_cheio.png" alt="">
+			<img id="v3" src="imagens/coracao_cheio.png" alt="">
+		</div>
+		<div class="cronometro">Tempo restante: <span id="cronometro"></span></div>
+	</div>
+	<script>
+		document.getElementById('cronometro').innerHTML = tempo
+		var criaMosquito = setInterval(posicaoRandomica, criaMosquitoTempo)
+	</script>
 </body>
+
 </html>
