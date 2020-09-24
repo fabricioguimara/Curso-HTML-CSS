@@ -3,14 +3,12 @@
 
 <head>
 	<title>Jogo - Mata mosquito</title>
-
 	<link rel="stylesheet" href="estilo.css" />
-	<script src="jogo.js"></script>
 </head>
 
 <body onresize="ajustaTamanhoPalcoJogo()">
 	<div id="myDiv" class="hideImg">
-		<img id="myImg" src="imagens/game_over.png" alt="">
+		<img id="myImg" alt="">
 		<button class="myButton" onclick="window.location.href = 'index.html'">Reiniciar</button>
 	</div>
 
@@ -22,10 +20,7 @@
 		</div>
 		<div class="cronometro">Tempo restante: <span id="cronometro"></span></div>
 	</div>
-	<script>
-		document.getElementById('cronometro').innerHTML = tempo
-		var criaMosquito = setInterval(posicaoRandomica, criaMosquitoTempo)
-	</script>
+	<script src="jogo.js"></script>
 </body>
 
 </html>

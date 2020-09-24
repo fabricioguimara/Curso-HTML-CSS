@@ -1,10 +1,18 @@
-
+// seta variaveis globais 
 var altura = 0
 var largura = 0
 var vidas = 1
 var tempo = 15
 var criaMosquitoTempo = 1500
 
+function ajustaTamanhoPalcoJogo() {
+	altura = window.innerHeight
+	largura = window.innerWidth
+}
+
+ajustaTamanhoPalcoJogo()
+
+// recupera nivel da página index.html
 var nivel = window.location.search
 nivel = nivel.replace('?','')
 
@@ -16,21 +24,18 @@ if (nivel === 'normal') {
 	criaMosquitoTempo = 750
 }
 
+// inicia tempo de criação de mosquitos de acordo com o nivel escolhido
+document.getElementById('cronometro').innerHTML = tempo
+var criaMosquito = setInterval(posicaoRandomica, criaMosquitoTempo)
 
-function ajustaTamanhoPalcoJogo() {
-	altura = window.innerHeight
-	largura = window.innerWidth
-}
-
-ajustaTamanhoPalcoJogo()
-
+// seta o countdown de tempo de acordo com a variavel global 'tempo'
 var cronometro = setInterval(function() {
 	tempo--
-	if (tempo < 0) {
-		document.getElementById('myImg').src = "imagens/vitoria.png"
-		resultado()
+	if (tempo < 0) { // fluxo de vitoria
+		mostraResultado("imagens/vitoria.png")
 		clearInterval(cronometro)
 		clearInterval(criaMosquito)
+		return false
 	} else {
 		document.getElementById('cronometro').innerHTML = tempo
 	}
@@ -42,10 +47,10 @@ function posicaoRandomica() {
 	if (document.getElementById('mosquito')) {
 		document.getElementById('mosquito').remove()
 
-		if (vidas > 3) {
+		if (vidas > 3) { // fluxo de derrota
+			mostraResultado("imagens/game_over.png")
 			clearInterval(cronometro)
 			clearInterval(criaMosquito)
-			resultado()
 			return false
 		} else {
 			document.getElementById('v' + vidas).src = "imagens/coracao_vazio.png"
@@ -62,7 +67,7 @@ function posicaoRandomica() {
 	posicaoY = posicaoY < 0 ? 0 : posicaoY
 
 
-	//criar o elemento html
+	//cria o elemento mosquito no html
 	var mosquito = document.createElement('img')
 
 	mosquito.src = 'imagens/mosquito.png'
@@ -90,6 +95,7 @@ function ladoAleatorio() {
 	return lado
 }
 
-function resultado() {
+function mostraResultado(result) {
+	document.getElementById('myImg').src = result
 	document.getElementById("myDiv").className = 'showImage'
 }
