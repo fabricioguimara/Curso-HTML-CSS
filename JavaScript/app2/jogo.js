@@ -1,79 +1,94 @@
 // seta variaveis globais 
 var altura = 0
 var largura = 0
-var vidas = 1
+var mortes = 1
 var tempo = 15
+var criaMosquito = 0
+var cronometro = 0
 var criaMosquitoTempo = 1500
+// recupera nivel da página index.html
+var urlParams = new URLSearchParams(window.location.search)
+var nivel = urlParams.get('nivel')
+
+iniciarJogo()
+
+function iniciarJogo() {
+	ajustaTamanhoPalcoJogo()
+	setaNivel()
+	inciaTempoMosquito()
+	fluxoVitoria()
+}
 
 function ajustaTamanhoPalcoJogo() {
 	altura = window.innerHeight
 	largura = window.innerWidth
 }
 
-ajustaTamanhoPalcoJogo()
 
-// recupera nivel da página index.html
-var nivel = window.location.search
-nivel = nivel.replace('?','')
-
-if (nivel === 'normal') {
-	criaMosquitoTempo = 1500
-} else if (nivel === 'dificil') {
-	criaMosquitoTempo = 1000
-} else if (nivel === 'promaster') {
-	criaMosquitoTempo = 750
+function setaNivel() {
+	if (nivel === 'normal') {
+		criaMosquitoTempo = 1500
+	} else if (nivel === 'dificil') {
+		criaMosquitoTempo = 1000
+	} else if (nivel === 'promaster') {
+		criaMosquitoTempo = 750
+	}
 }
 
-// inicia tempo de criação de mosquitos de acordo com o nivel escolhido
-document.getElementById('cronometro').innerHTML = tempo
-var criaMosquito = setInterval(posicaoRandomica, criaMosquitoTempo)
+function inciaTempoMosquito() {
+	// inicia tempo de criação de mosquitos de acordo com o nivel escolhido
+	document.getElementById('cronometro').innerHTML = tempo
+	criaMosquito = setInterval(posicaoRandomica, criaMosquitoTempo)
+}
 
-// seta o countdown de tempo de acordo com a variavel global 'tempo'
-var cronometro = setInterval(function() {
-	tempo--
-	if (tempo < 0) { // fluxo de vitoria
-		mostraResultado("imagens/vitoria.png")
-		clearInterval(cronometro)
-		clearInterval(criaMosquito)
-		return false
-	} else {
-		document.getElementById('cronometro').innerHTML = tempo
-	}
-},1000)
-
-function posicaoRandomica() {
-
-	// remover o mosquito anterior (caso ele exista)
-	if (document.getElementById('mosquito')) {
-		document.getElementById('mosquito').remove()
-
-		if (vidas > 3) { // fluxo de derrota
-			mostraResultado("imagens/game_over.png")
+function fluxoVitoria() {
+	// seta o countdown de tempo de acordo com a variavel global 'tempo'
+	cronometro = setInterval(function () {
+		tempo--
+		if (tempo < 0) { // fluxo de vitoria
+			mostraResultado(true)
 			clearInterval(cronometro)
 			clearInterval(criaMosquito)
 			return false
 		} else {
-			document.getElementById('v' + vidas).src = "imagens/coracao_vazio.png"
-			vidas++
+			document.getElementById('cronometro').innerHTML = tempo
 		}
+	}, 1000)
+}
 
+function posicaoRandomica() {
+	// remover o mosquito anterior (caso ele exista)
+	if (document.getElementById('mosquito')) {
+		document.getElementById('mosquito').remove()
 
+		if (mortes > 3) { // fluxo de derrota
+			fluxoDerrota()
+			return
+		} else {
+			document.getElementById('v' + mortes).src = "imagens/coracao_vazio.png"
+			mortes++
+		}
 	}
+	// calcula posição randomica e cria mosquito
+	var posicao = calculaPosicao()
+	criarMosquito(posicao)
+}
 
-	var posicaoX = Math.floor(Math.random() * largura) - 90
-	var posicaoY = Math.floor(Math.random() * altura) - 90
+function fluxoDerrota() {
+	mostraResultado(false)
+	clearInterval(cronometro)
+	clearInterval(criaMosquito)
+}
 
-	posicaoX = posicaoX < 0 ? 0 : posicaoX
-	posicaoY = posicaoY < 0 ? 0 : posicaoY
-
-
+function criarMosquito(posicao) {
 	//cria o elemento mosquito no html
+
 	var mosquito = document.createElement('img')
 
 	mosquito.src = 'imagens/mosquito.png'
 	mosquito.className = tamanhoAleatorio() + ' ' + ladoAleatorio()
-	mosquito.style.left = posicaoX + 'px'
-	mosquito.style.top = posicaoY + 'px'
+	mosquito.style.left = posicao.X + 'px'
+	mosquito.style.top = posicao.Y + 'px'
 	mosquito.style.position = 'absolute'
 	mosquito.id = 'mosquito'
 	mosquito.onclick = function () {
@@ -81,6 +96,16 @@ function posicaoRandomica() {
 	}
 
 	document.body.appendChild(mosquito)
+}
+
+function calculaPosicao() {
+	var posicaoX = Math.floor(Math.random() * largura) - 90
+	var posicaoY = Math.floor(Math.random() * altura) - 90
+
+	posicaoX = posicaoX < 0 ? 0 : posicaoX
+	posicaoY = posicaoY < 0 ? 0 : posicaoY
+
+	return { X: posicaoX, Y: posicaoY }
 }
 
 function tamanhoAleatorio() {
@@ -95,7 +120,10 @@ function ladoAleatorio() {
 	return lado
 }
 
-function mostraResultado(result) {
-	document.getElementById('myImg').src = result
+function mostraResultado(ganhou) {
+	var imagemResultado = "imagens/game_over.png"
+	if (ganhou) imagemResultado = "imagens/vitoria.png"
+
+	document.getElementById('myImg').src = imagemResultado
 	document.getElementById("myDiv").className = 'showImage'
 }
