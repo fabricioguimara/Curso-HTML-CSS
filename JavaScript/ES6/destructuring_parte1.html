@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+
+  <script>
+  //destructuring
+
+  let frutas = ['Abacaxi', 'Uva', 'Pera', 'Mamão']
+
+  // let [a, b, , c] = frutas //pular um indice
+  let [a, b = 'Abacate', c, d, e = 'Banana'] = frutas
+
+  let coisas = [['Abacaxi', 'Uva', 'Pera', 'Mamão'], ['José', 'Maria']]
+  let [[,,n1],] = coisas //recupero pera do primeiro array
+  let [,[,n2]] = coisas //recupero maria do segundo array
+
+  console.log(n1)
+  console.log(n2)
+
+  console.log(a,b,c,d,e)
+  </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

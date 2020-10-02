@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <script>
+    // objeto literal 
+    let produto = {
+      descricao: 'Notebook',
+      preco: 1800,
+      detalhes: {fabricante: 'abc', modelo: 'xyz'}
+    }
+
+    //token
+    //array => []
+    //objeto => {}
+
+    // let { descricao, preco } = produto
+    // console.log(descricao,preco)
+    // console.log(produto.descricao,produto.preco)
+
+    // let {descricao: d, preco: p} = produto
+    // console.log(d,p)
+
+    // let {descricao: d, preco: p, desconto} = produto  // retorna undefined pq desconto não esta no objeto
+
+    // let {descricao: d, preco: p = 1000, desconto = 5} = produto
+    //  console.log(d,p,desconto)
+
+    let { detalhes: { fabricante: f, modelo, tipo = 'Não informado' } } = produto
+    console.log(f, modelo, tipo)
+  </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

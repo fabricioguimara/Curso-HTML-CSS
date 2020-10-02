@@ -7,21 +7,21 @@
 
       function exibirArtigo(id, callbackSucesso, callbackErro) {
         //lógica: recuperar o id via requisição http
-        if ( false ) {
+        if ( true ) {
           callbackSucesso('Funções de callback em JS', 'Funções de callback são muito utilizadas....')
         } else {
           callbackErro('Erro ao recuperar os dados')
         }
       }
 
-      var callbackSucesso = function(titulo, descricao){
+      var callbackSucesso = function(titulo, descricao){  // funçoes void, sem retorno 
         document.write('<h1>' + titulo + '</h1>')
         document.write('<hr />')
         document.write('<p>' + descricao + '</p>')
       }
 
-      var callbackErro = function(erro) { 
-        document.write('<p><b>Erro:</b>' + erro + '</p>')
+      var callbackErro = function(erro) { // funçoes void, sem retorno
+        document.write('<p><b>Erro:</b>' + erro + '</p>')  
       }
 
       exibirArtigo(1, callbackSucesso, callbackErro)
