@@ -47,7 +47,6 @@ class Bd {
             if (despesa === null) {
                 continue
             }
-            despesa.id = i //recupero o id para uso na exclusao de registros
             despesas.push(despesa)
         }
         return despesas
@@ -82,12 +81,8 @@ class Bd {
             despesasFiltradas = despesasFiltradas.filter(d => d.valor == despesa.valor)
         }
 
-        return despesasFiltradas
+        carregaListaDespesas(despesasFiltradas)
 
-    }
-
-    remover(id) {
-        localStorage.removeItem(id)
     }
 }
 
@@ -107,7 +102,7 @@ function recuperaDadosForm() {
 
 function cadastrarDespesa() {
 
-    let despesa = recuperaDadosForm() //
+    let despesa = recuperaDadosForm()
 
     if (despesa.validarDados()) {
         bd.gravar(despesa)
@@ -132,16 +127,19 @@ function cadastrarDespesa() {
     $('#modalRegistraDespesa').modal('show') //comando de Jquery
 }
 
-function carregaListaDespesas(despesas = Array(), filtro = false) {
-// se não houver filtros, exibo todos os registros
-    if (despesas.length == 0 && filtro == false) {
+function carregaListaDespesas(filtro) {
+    let despesas = Array()
+    // selecionando o elemento tbody da tabela
+    let listaDespesas = document.getElementById("listaDespesas");
+    let valor = 0
+
+// se não houver filtro, exibo todos os registros de despesas 
+    if (filtro != null) {
+        despesas = filtro
+        listaDespesas.innerHTML = '' //limpando todos os elementos
+    } else {
         despesas = bd.recuperarTodosRegistros()
     }
-
-    // selecionando o elemento tbody da tabela e limpa
-    let listaDespesas = document.getElementById("listaDespesas");
-    listaDespesas.innerHTML = '' 
-    let valor = 0
 
     //percorrer o array despesas percorrendo cada item de forma dinamica
     despesas.forEach(function (item) {
@@ -161,15 +159,6 @@ function carregaListaDespesas(despesas = Array(), filtro = false) {
         //ajustar o valor
         valor = parseInt(item.valor) 
         valor = valor.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
-
-        //criar o botao de exclusao
-        let btn = document.createElement("button")
-        btn.className = 'btn btn-danger'
-        btn.innerHTML = '<i class="fas fa-times"></i>'
-        btn.onclick = function() {
-            bd.remover(item.id)
-            window.location.reload()
-        } 
         
         //criando a linha(tr)
         let linha = listaDespesas.insertRow(0);
@@ -178,15 +167,12 @@ function carregaListaDespesas(despesas = Array(), filtro = false) {
         linha.insertCell(1).innerHTML = item.tipo
         linha.insertCell(2).innerHTML = item.descricao
         linha.insertCell(3).innerHTML = valor
-        linha.insertCell(4).append(btn)
     })
 }
 
 function pesquisarDespesa() {
     let despesa = recuperaDadosForm()
-    let despesas = bd.pesquisar(despesa)
-    carregaListaDespesas(despesas, true)
+    bd.pesquisar(despesa)
 }
-
 
 
