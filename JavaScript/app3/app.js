@@ -94,14 +94,14 @@ class Bd {
 let bd = new Bd()
 
 function recuperaDadosForm() {
-    let ano = document.getElementById('ano')
-    let mes = document.getElementById('mes')
-    let dia = document.getElementById('dia')
-    let tipo = document.getElementById('tipo')
-    let descricao = document.getElementById('descricao')
-    let valor = document.getElementById('valor')
+    const ano = document.getElementById('ano')
+    const mes = document.getElementById('mes')
+    const dia = document.getElementById('dia')
+    const tipo = document.getElementById('tipo')
+    const descricao = document.getElementById('descricao')
+    const valor = document.getElementById('valor')
 
-    let despesa = new Despesa(ano.value, mes.value, dia.value, tipo.value, descricao.value, valor.value)
+    const despesa = new Despesa(ano.value, mes.value, dia.value, tipo.value, descricao.value, valor.value)
     return despesa
 }
 

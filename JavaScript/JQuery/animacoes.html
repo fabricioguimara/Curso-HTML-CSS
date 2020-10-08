@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery</title>
+
+	<style>
+		.div {
+			width: 80px;
+			height: 80px;
+			border: solid 1px #000;
+			background-color: #aaa;
+		}
+	</style>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script>
+
+		$(document).ready(() => {  //verifica se o DOM esta carregado 
+
+			$('button').on('click', () => {
+				// seto as variaveis de posição final para cada div
+				let tempo = 3500
+				let visualFinal1 = { //objeto literal
+					'width': '160px',
+					'height': '160px',
+					'margin-left': '400px',
+					'margin-top': '50px',
+					'border-radius': '100px'
+				}
+				let visualFinal2 = { //objeto literal
+					'width': '250px',
+					'height': '80px',
+					'margin-left': '170px',
+					'margin-top': '60px',
+					'border-radius': '25px'
+				}
+				let visualFinal3 = { //objeto literal
+					'width': '100px',
+					'height': '350px',
+					'top': '250px',
+					'left': '435px',
+					'border-radius': '25px'
+				}
+				let visualFinal4 = { //objeto literal
+					'width': '250px',
+					'height': '80px',
+					'top': '305px',
+					'left': '535px',
+					'border-radius': '25px'
+				}
+				let visualFinal5 = { //objeto literal
+					'width': '300px',
+					'height': '80px',
+					'top': '680px',
+					'left': '190px',
+					'border-radius': '25px'
+				}
+				let visualFinal6 = { //objeto literal
+					'width': '300px',
+					'height': '80px',
+					'top': '680px',
+					'left': '470px',
+					'border-radius': '25px'
+				}
+
+				$('#div1').animate(visualFinal1, { duration: tempo })
+
+				$('#div2').css({'position':'absolute', 'transform':'rotate(140deg)', 'transition-duration':'2s','background-color':'yellow'}).animate(visualFinal2, {duration: tempo})
+
+				$('#div3').css({'position': 'absolute'}).animate(visualFinal3, {duration: tempo})
+
+				$('#div4').css({'position':'absolute', 'transform':'rotate(45deg)','transition-duration':'2s','background-color':'yellow'}).animate(visualFinal4, {duration: tempo})
+
+				$('#div5').css({'position':'absolute', 'transform':'rotate(120deg)','transition-duration':'2s','background-color':'yellow'}).animate(visualFinal5, {duration: tempo})
+				
+				$('#div6').css({'position':'absolute', 'transform':'rotate(63deg)','transition-duration':'2s','background-color':'yellow'}).animate(visualFinal6, {duration: tempo})
+			})
+
+		})
+
+	</script>
+</head>
+
+<body>
+
+	<button type="button">Iniciar animação</button>
+	<div id="div1" class="div"></div>
+	<div id="div2" class="div"></div>
+	<div id="div3" class="div"></div>
+	<div id="div4" class="div"></div>
+	<div id="div5" class="div"></div>
+	<div id="div6" class="div"></div>
+
+</body>
+
+</html>
