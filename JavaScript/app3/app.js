@@ -94,12 +94,14 @@ class Bd {
 let bd = new Bd()
 
 function recuperaDadosForm() {
-    const ano = document.getElementById('ano')
-    const mes = document.getElementById('mes')
-    const dia = document.getElementById('dia')
-    const tipo = document.getElementById('tipo')
-    const descricao = document.getElementById('descricao')
-    const valor = document.getElementById('valor')
+    const ano = $('#ano')
+    const mes = $('#mes')
+    const dia = $('#dia')
+    const tipo = $('#tipo')
+    const descricao = $('#descricao')
+    const valor = $('#valor')
+
+    console.log($('#ano').val())
 
     const despesa = new Despesa(ano.value, mes.value, dia.value, tipo.value, descricao.value, valor.value)
     return despesa
@@ -111,11 +113,11 @@ function cadastrarDespesa() {
 
     if (despesa.validarDados()) {
         bd.gravar(despesa)
-        document.getElementById('modal_titulo_div').className = 'modal-header text-success'
-        document.getElementById('modal_titulo').innerHTML = 'Registro inserido com sucesso'
-        document.getElementById('modal_conteudo').innerHTML = 'Despesa foi cadastrada com sucesso!'
-        document.getElementById('modal_btn').innerHTML = 'Voltar'
-        document.getElementById('modal_btn').className = 'btn btn-success'
+        $('#modal_titulo_div').addClass('modal-header text-success') 
+        $('#modal_titulo').html('Registro inserido com sucesso')
+        $('#modal_conteudo').html('Despesa foi cadastrada com sucesso!')
+        $('#modal_btn').html('Voltar')
+        $('#modal_btn').addClass('btn btn-success') 
         ano.value = ''
         mes.value = ''
         dia.value = ''
@@ -123,11 +125,11 @@ function cadastrarDespesa() {
         descricao.value = ''
         valor.value = ''
     } else {
-        document.getElementById('modal_titulo_div').className = 'modal-header text-danger'
-        document.getElementById('modal_titulo').innerHTML = 'Erro na inclusão do registro'
-        document.getElementById('modal_conteudo').innerHTML = 'Erro na gravação. Verifique se todos os campos foram preenchidos corretamente!'
-        document.getElementById('modal_btn').innerHTML = 'Voltar e corrigir'
-        document.getElementById('modal_btn').className = 'btn btn-danger'
+        $('#modal_titulo_div').addClass('modal-header text-danger') 
+        $('#modal_titulo').html('Erro na inclusão do registro')
+        $('#modal_conteudo').html('Erro na gravação. Verifique se todos os campos foram preenchidos corretamente!')
+        $('#modal_btn').html('Voltar e corrigir')
+        $('#modal_btn').addClass('btn btn-danger') 
     }
     $('#modalRegistraDespesa').modal('show') //comando de Jquery
 }

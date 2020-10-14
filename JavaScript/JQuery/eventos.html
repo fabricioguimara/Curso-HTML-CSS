@@ -104,29 +104,28 @@
 			})
 
 
-			$('#teclado').keyup((e) => {
-				if (e.keyCode < 97 || e.keyCode > 100) {
-					let txt = $(e.target).val()
-					txt = txt.slice(0, -1)
+			// $('#teclado').keyup((e) => {
+			// 	if (e.keyCode < 97 || e.keyCode > 100) {
+			// 		let txt = $(e.target).val()
+			// 		txt = txt.slice(0, -1)
 
-					$(e.target).val(txt)
-				}
-			})
+			// 		$(e.target).val(txt)
+			// 	}
+			// })
 
 
 
-			/*
 			$('#teclado').keyup((e) => {
 				$('#resultadoTecla').html('Tecla liberada')
 
-				if(e.keyCode == 13) {
-					let txt = $(e.target).val()
-					$('#resultadoTecla').html(txt)
-					$(e.target).val('')
+				if(e.keyCode == 13) { //aperto o enter
+					let txt = $(e.target).val() //recupero o valor do input
+					$('#resultadoTecla').html(txt) //imprimo o valor no span ao lado
+					$(e.target).val('') //limpo o campo do input
 				}
 				
 			})
-			*/
+			
 
 			$('#nome, #email').focus((e) => {
 				//console.log('Esse elemento HTML recebeu o foco')
@@ -138,7 +137,7 @@
 				$(e.target).removeClass('inputFocado')
 			})
 
-			$('#opcao').change((e) => {
+			$('#opcao').change((e) => { //recupera o valor do select
 				console.log($(e.target).val())
 			})
 

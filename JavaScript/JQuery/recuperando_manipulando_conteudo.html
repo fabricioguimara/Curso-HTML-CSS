@@ -8,10 +8,12 @@
 
 			$(document).ready(() => {
 				
+				// console.log('conteúdo div 1: ', $('#div1').html())
+				// console.log('conteúdo div 2: ', $('#div2').html())
 
-				console.log('conteúdo div 1: ', $('#div1').html())
+				console.log('conteúdo div 1: ', $('#div1').html('<strong style="color: red">Eu sou o valor novo</strong>'))
 
-				console.log('conteúdo div 2: ', $('#div2').html())
+				console.log('conteúdo div 1: ', $('#div1').text('<strong style="color: red">Eu sou o valor novo</strong>'))
 
 			})
 

@@ -20,12 +20,12 @@
 	<script>
 		$(document).ready(() => {
 
-			$('body').on('focus', 'input', e => {
+			$('body').on('focus', 'input', e => { //selecionando o elemento filho
 				$(e.target).removeClass('desfocado')
 				$(e.target).addClass('focado')
 			})
 
-			$('body').on('blur', 'input', e => {
+			$('body').on('blur', 'input', e => { //selecionando o elemento filho
 				$(e.target).removeClass('focado')
 				$(e.target).addClass('desfocado')
 			})

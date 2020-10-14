@@ -8,10 +8,10 @@
 
 		<script>
 			$(document).ready(() => {
-				console.log($('.secao1').parent())
-				console.log($('.subSecao').closest('#pagina'))
-				console.log($('.subSecao').closest('.secao1'))
-				console.log($('#topo').find('.item'))
+				console.log($('.secao1').parent()) //seleciona o elemento pai
+				console.log($('.subSecao').closest('#pagina')) //procura o elemento pai passando o id
+				console.log($('.subSecao').closest('.secao1')) //procura o elemento pai passando a classe
+				console.log($('#topo').find('.item')) //procura por elementos filhos
 				console.log($('.subSecao').closest('#pagina').find('h1'))
 			})
 		</script>

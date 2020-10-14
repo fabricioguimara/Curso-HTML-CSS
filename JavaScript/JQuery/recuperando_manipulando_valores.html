@@ -9,8 +9,11 @@
 
 			$(document).ready(() => {
 				
-				
-				$.each($('.interesse:checked'), (indice, valor) => {
+				console.log($('#nome').val()) //recupera o valor digitado
+
+				console.log($('#origem').val('3')) //seta o valor
+
+				$.each($('.interesse:checked'), (indice, valor) => {  //para selecionar checkbox
 					console.log(indice, valor.value)
 				})
 
